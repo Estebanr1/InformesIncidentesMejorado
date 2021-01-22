@@ -1,0 +1,42 @@
+﻿<Window x:Class="InformesIncidentes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InformesIncidentes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent" >
+
+    <Border CornerRadius="45" Background="#FF2BAAE6">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"></RowDefinition>
+                <RowDefinition Height="70"></RowDefinition>
+                <RowDefinition Height="*" ></RowDefinition>
+                <RowDefinition Height="70">            
+                </RowDefinition>
+                <RowDefinition Height="90" ></RowDefinition>
+
+            </Grid.RowDefinitions>
+            
+            <Border Grid.Row="0" Background=" blue" CornerRadius="45,45,0,0" MouseLeftButtonDown="Border_MouseLeftButtonDown"></Border>
+            <Label x:Name="labelTitulo" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="45" Foreground="Aqua">Reporte</Label>
+            <Label Grid.Row="1" Margin="50,00,0,10" FontSize="30">Fecha:</Label>
+            <Label Grid.Row="2" Margin="50,00,0,10" FontSize="30">Problema:</Label>
+            <Label Grid.Row="2" Margin="50,160,0,10" FontSize="30">Solucion Inmediata:</Label>
+            <Label Grid.Row="2" Margin="50,300,0,10" FontSize="30">Solucion Definitiva:</Label>
+            <Label Grid.Row="3" Margin="50,0,0,10" FontSize="30">Nombre:</Label>
+            <Button x:Name="botonGenerar"   Grid.Row="4" Height="40" Width="120" Margin="200,25,340,25" HorizontalAlignment="Left"  VerticalAlignment="Center" Click="botonGenerar_Click_1">Generar Archivo</Button>
+            <TextBox x:Name="texboxProblema"  Grid.Row="2" Margin="50,50,50,320" Width="700" FontSize="20" Background="White" Text="Escribir el inconveniente ocurrido"/>
+            <Button x:Name="botonSalir" Grid.Row="4" Height="40" Width="120" Margin="0,25,200,25" HorizontalAlignment="Right" Click="botonSalir_Click"   >Salir</Button>
+            <TextBox x:Name="textBoxNombre" HorizontalAlignment="Left" Margin="188,14,0,0" Grid.Row="3" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="32" RenderTransformOrigin="0.077,-1.816" MaxLength="20" FontSize="18"/>
+            <TextBox x:Name="texBoxSolucionInmediata" HorizontalAlignment="Center" Margin="0,210,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="700" Height="90" FontSize="18"/>
+            <TextBox x:Name="textBoxSolucionDefinitiva" HorizontalAlignment="Center" Margin="0,350,0,0" Grid.Row="2" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="700" Height="105" FontSize="18"/>
+            <DatePicker x:Name="datePickerFecha" HorizontalAlignment="Left" Margin="158,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="242" Height="38" FontSize="16" BorderBrush="{x:Null}"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="790"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        </Grid>
+    </Border>
+</Window>
